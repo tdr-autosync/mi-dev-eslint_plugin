@@ -6,7 +6,7 @@ This plugin includes:
 1. A configuration, which helps following coding conventions.
 2. A plugin to enforce `qa-...` classes on required HTML elements.
 
-## Customer rules
+## Custom rules
 
 ### "require-qa-class" rule
 
