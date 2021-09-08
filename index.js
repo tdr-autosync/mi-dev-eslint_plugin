@@ -4,5 +4,6 @@ module.exports = {
   },
   configs: {
     recommended: require('./eslint-config-recommended'),
+    typescript: require('./eslint-config-typescript'),
   },
 };
