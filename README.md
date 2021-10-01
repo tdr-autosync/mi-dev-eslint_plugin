@@ -33,7 +33,7 @@ This rule is not enabled by default. To use it you need to enable it manually, j
 | -------- | ---------- | ------------------------------------------- | ----------------------------------- |
 | elements | `string[]` | `["button", "input", "select", "textarea"]` | Sets the list of elements to check. |
 
-### Publishing a new version
+## Publishing a new version
 
 Versions are published as git tags. Use following commands to publish a new version:
 
