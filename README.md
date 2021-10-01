@@ -3,7 +3,7 @@
 Maintainer: Serhii Petkun
 
 This plugin includes:
-1. A configuration, which helps following coding conventions.
+1. ESLint configurations, which help following coding conventions.
 2. A plugin to enforce `qa-...` classes on required HTML elements.
 
 ## Custom rules
@@ -32,3 +32,15 @@ This rule is not enabled by default. To use it you need to enable it manually, j
 | Name     | Type       | Default                                     | Description                         |
 | -------- | ---------- | ------------------------------------------- | ----------------------------------- |
 | elements | `string[]` | `["button", "input", "select", "textarea"]` | Sets the list of elements to check. |
+
+### Publishing a new version
+
+Versions are published as git tags. Use following commands to publish a new version:
+
+```bash
+git checkout develop
+git fetch
+git reset --hard origin/develop
+yarn version --new-version major
+git push --follow-tags
+```
