@@ -1,6 +1,6 @@
 {
   "name": "@motoinsight/eslint-plugin-motoinsight",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "Motoinsight ESLint plugin",
   "author": "Motoinsight",
   "license": "UNLICENSED",
