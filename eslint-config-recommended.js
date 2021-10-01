@@ -1,6 +1,12 @@
 module.exports = {
+  parser: require.resolve('vue-eslint-parser'),
   parserOptions: {
-    parser: 'babel-eslint',
+    ecmaVersion: 2020,
+    parser: require.resolve('@typescript-eslint/parser'),
+    extraFileExtensions: ['.vue'],
+    ecmaFeatures: {
+      jsx: true,
+    },
   },
   env: {
     browser: true,
@@ -13,7 +19,6 @@ module.exports = {
     'plugin:nuxt/recommended',
     'plugin:vue/recommended',
     'prettier',
-    'prettier/vue',
   ],
   plugins: ['@motoinsight/eslint-plugin-motoinsight', 'simple-import-sort'],
   reportUnusedDisableDirectives: true,
@@ -108,11 +113,11 @@ module.exports = {
 
     'consistent-this': ['error', 'self'],
 
+    'func-style': ['error', 'declaration'],
+
     'max-depth': ['error', 4],
 
     'max-nested-callbacks': ['error', 4],
-
-    'new-cap': 'error',
 
     'new-parens': 'error',
 
@@ -121,6 +126,8 @@ module.exports = {
     'no-negated-condition': 'error',
 
     'no-nested-ternary': 'error',
+
+    'no-underscore-dangle': 'error',
 
     'no-unneeded-ternary': 'error',
 
@@ -162,6 +169,10 @@ module.exports = {
 
     'vue/component-name-in-template-casing': ['error', 'PascalCase'],
 
+    'vue/custom-event-name-casing': ['error', 'camelCase'],
+
+    'vue/new-line-between-multi-line-property': 'error',
+
     'vue/no-boolean-default': 'error',
 
     'vue/no-duplicate-attr-inheritance': 'error',
@@ -176,11 +187,17 @@ module.exports = {
 
     'vue/no-unused-properties': 'error',
 
+    'vue/no-unused-refs': 'error',
+
+    'vue/no-useless-mustaches': 'error',
+
     'vue/no-useless-v-bind': 'error',
 
     'vue/padding-line-between-blocks': 'error',
 
     'vue/require-name-property': 'error',
+
+    'vue/v-on-function-call': 'error',
 
     'vue/no-deprecated-scope-attribute': 'error',
 
@@ -196,4 +213,12 @@ module.exports = {
 
     'simple-import-sort/imports': 'error',
   },
+  overrides: [
+    {
+      files: ['*.ts'],
+      rules: {
+        'camelcase': 'off',
+      },
+    },
+  ],
 };
