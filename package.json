@@ -1,12 +1,13 @@
 {
   "name": "@motoinsight/eslint-plugin-motoinsight",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "Motoinsight ESLint plugin",
   "author": "Motoinsight",
   "license": "UNLICENSED",
   "main": "index.js",
   "files": [
     "eslint-config-recommended.js",
+    "eslint-config-typescript.js",
     "index.js",
     "rules/**/*"
   ],
